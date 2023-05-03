@@ -4,7 +4,6 @@ export libscalapack32
 using CompilerSupportLibraries_jll
 using OpenBLAS32_jll
 using MPItrampoline_jll
-using MPIPreferences
 JLLWrappers.@generate_wrapper_header("SCALAPACK32")
 JLLWrappers.@declare_library_product(libscalapack32, "libscalapack32.so")
 function __init__()
