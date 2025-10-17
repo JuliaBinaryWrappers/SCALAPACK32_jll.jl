@@ -2,12 +2,12 @@
 export libscalapack32
 
 using CompilerSupportLibraries_jll
-using OpenBLAS32_jll
+using libblastrampoline_jll
 using MPICH_jll
 JLLWrappers.@generate_wrapper_header("SCALAPACK32")
 JLLWrappers.@declare_library_product(libscalapack32, "@rpath/libscalapack32.dylib")
 function __init__()
-    JLLWrappers.@generate_init_header(CompilerSupportLibraries_jll, OpenBLAS32_jll, MPICH_jll, MPIPreferences)
+    JLLWrappers.@generate_init_header(CompilerSupportLibraries_jll, libblastrampoline_jll, MPICH_jll, MPIPreferences)
     JLLWrappers.@init_library_product(
         libscalapack32,
         "lib/libscalapack32.dylib",
